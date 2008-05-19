@@ -1,0 +1,23 @@
+# Revision history for Perl extension Attribute::Util.
+#
+# $Id: Changes,v 1.2 2007/04/06 12:10:14 dankogai Exp dankogai $
+#
+$Revision: 1.2 $ $Date: 2007/04/06 12:10:14 $
+! t/04sighandler.t
+  Resolved RT #15527 (alarm unsupported on Win32)
+  
+1.01  2006/05/02 15:33:22
+! lib/Attribute/*.pm
+  Oops.  MARCEL, not MERCEL.
+
+1.00  2006/05/02 14:52:40
+* *
+  Refactored by dankogai
+	
+0.02  Wed May 30 22:37:56 2001
+	- added documentation, tests
+
+0.01  Wed May 30 16:23:09 2001
+	- original version; created by h2xs 1.20 with options
+		-XAn Attribute::Util
+
