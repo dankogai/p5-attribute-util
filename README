@@ -1,12 +1,12 @@
 NAME
-    Attribute::Util - A selection of general-utility attributes
+    Attribute::Util - Assorted general utility attributes
 
 SYNOPSIS
-      # makes :Abstract, :Alias, :Memoize and :SigHandler available. 
+      # makes all attributes available
       use  Attribute::Util;
 
       # or you can load individual attributes 
-      use Attribute::Util(Memoize SigHandler);
+      use Attribute::Util qw(Memoize SigHandler);
 
 DESCRIPTION
     When used without argument, this module provides four universally
@@ -20,6 +20,9 @@ DESCRIPTION
 
     Memoize
         See Attribute::Memoize.
+
+    Method
+        See Attribute::Method.
 
     SigHandler
         See Attribute::SigHandler.
@@ -53,5 +56,5 @@ COPYRIGHT
     under the same terms as Perl itself.
 
 SEE ALSO
-    perl(1), Attribute::Handlers(3pm), Memoize(3pm).
+    perl(1), Attribute::Handlers
 

@@ -5,6 +5,7 @@ README
 lib/Attribute/Abstract.pm
 lib/Attribute/Alias.pm
 lib/Attribute/Memoize.pm
+lib/Attribute/Method.pm
 lib/Attribute/SigHandler.pm
 lib/Attribute/Util.pm
 t/00load.t
@@ -12,4 +13,4 @@ t/01alias.t
 t/02abstract.t
 t/03memoize.t
 t/04sighandler.t
-META.yml                                 Module meta-data (added by MakeMaker)
+t/05method.t

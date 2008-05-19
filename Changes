@@ -1,8 +1,14 @@
 # Revision history for Perl extension Attribute::Util.
 #
-# $Id: Changes,v 1.2 2007/04/06 12:10:14 dankogai Exp dankogai $
+# $Id: Changes,v 1.3 2008/05/19 06:02:40 dankogai Exp dankogai $
 #
-$Revision: 1.2 $ $Date: 2007/04/06 12:10:14 $
+$Revision: 1.3 $ $Date: 2008/05/19 06:02:40 $
+! lib/Attribute/Util.pm
++ lib/Attribute/Method.pm
++ t/05method.t
+  Attribute::Method added
+
+1.02 2007/04/06 12:10:14
 ! t/04sighandler.t
   Resolved RT #15527 (alarm unsupported on Win32)
   

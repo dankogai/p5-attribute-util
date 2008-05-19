@@ -5,8 +5,8 @@ use strict;
 use Attribute::Handlers;
 use Carp ();
 
-our $VERSION = sprintf "%d.%02d", q$Revision: 1.2 $ =~ /(\d+)/g;
-our @DEFAULT_ATTRIBUTES = qw(Abstract Alias Memoize SigHandler);
+our $VERSION = sprintf "%d.%02d", q$Revision: 1.3 $ =~ /(\d+)/g;
+our @DEFAULT_ATTRIBUTES = qw(Abstract Alias Memoize Method SigHandler);
 
 sub import{
     my $pkg = shift;
@@ -24,15 +24,15 @@ __END__
 
 =head1 NAME
 
-Attribute::Util - A selection of general-utility attributes
+Attribute::Util - Assorted general utility attributes
 
 =head1 SYNOPSIS
 
-  # makes :Abstract, :Alias, :Memoize and :SigHandler available. 
+  # makes all attributes available
   use  Attribute::Util;
 
   # or you can load individual attributes 
-  use Attribute::Util(Memoize SigHandler);
+  use Attribute::Util qw(Memoize SigHandler);
 
 =head1 DESCRIPTION
 
@@ -52,6 +52,10 @@ See L<Attribute::Alias>.
 =item Memoize
 
 See L<Attribute::Memoize>.
+
+=item Method
+
+See L<Attribute::Method>.
 
 =item SigHandler
 
