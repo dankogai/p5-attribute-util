@@ -5,7 +5,7 @@ use strict;
 use Attribute::Handlers;
 use B::Deparse;
 
-our $VERSION = sprintf "%d.%02d", q$Revision: 1.1 $ =~ /(\d+)/g;
+our $VERSION = sprintf "%d.%02d", q$Revision: 1.2 $ =~ /(\d+)/g;
 
 my $dp        = B::Deparse->new();
 my %sigil2ref = (
@@ -61,7 +61,7 @@ Attribute::Method - No more 'my $self = shift;'
       $self->{foo} = $val;
   }
   sub get_foo : Method {
-      $self->{val};
+      $self->{foo};
   }
   #....
 
@@ -78,6 +78,43 @@ module instead.
 
 None known so far. If you find any bugs or oddities, please do inform the
 author.
+
+=head1 CAVEAT
+
+The following does not work.
+
+=over 2
+
+=item foo.pl
+
+  use Attribute::Memoize;
+  use strict;
+  use warnings;
+  use lib '.';
+  print "loading bar ...\n";
+  require bar; # should have been 'use bar;'
+  print "bar is loaded\n";
+  print bar::func(),"\n";
+  print bar::func(),"\n";
+  exit 0;
+
+=item bar.pm
+
+  package bar;
+  use strict;
+  use warnings;
+  use Attribute::Memoize;
+
+  sub func : Memoize {
+    print "func runs\n";
+    return 123;
+  }
+  1;
+
+=back
+
+To use modules that use L<Attribute::Memoize>, don't C<require>;
+C<use> it.  That holds true for most Attribute::* modules.
 
 =head1 AUTHOR
 
