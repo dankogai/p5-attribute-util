@@ -5,9 +5,9 @@ use strict;
 use Attribute::Handlers;
 use B::Deparse;
 
-our $VERSION = sprintf "%d.%02d", q$Revision: 1.2 $ =~ /(\d+)/g;
+our $VERSION = sprintf "%d.%02d", q$Revision: 1.3 $ =~ /(\d+)/g;
 
-my $dp        = B::Deparse->new();
+my $dp        = B::Deparse->new('-l');
 my %sigil2ref = (
     '$' => \undef,
     '@' => [],
@@ -29,13 +29,14 @@ sub UNIVERSAL::Method : ATTR(RAWDATA) {
     my ( $pkg, $sym, $ref, undef, $args ) = @_;
     my $src = $dp->coderef2text($ref);
     if ($args) {
-        $src =~ s/\{/sub{\nmy \$self = shift; my ($args) = \@_;\n/;
+        $src =~ s/\{/{\nmy \$self = shift; my ($args) = \@_;\n/;
     }
     else {
-        $src =~ s/\{/sub{\nmy \$self = shift;\n/;
+        $src =~ s/\{/{\nmy \$self = shift;\n/;
     }
     no warnings 'redefine';
-    *$sym = eval qq{ package $pkg; $src };
+    my $sub_name = *{$sym}{NAME};
+    eval qq{ package $pkg; sub $sub_name $src };
 }
 
 "Rosebud"; # for MARCEL's sake, not 1 -- dankogai
