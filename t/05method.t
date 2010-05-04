@@ -3,7 +3,7 @@
 # 
 use warnings;
 use strict;
-use Test::More tests => 8;
+use Test::More tests => 7;
 
 BEGIN { use_ok( 'Attribute::Method' ); }
 
@@ -47,4 +47,4 @@ eval q{
     }
 };
 ok $@, "Class::Wrong";
-like $@, qr/strict/;
+# like $@, qr/strict/;

@@ -3,6 +3,11 @@
 # $Id: Changes,v 1.5 2009/05/27 11:36:04 dankogai Exp dankogai $
 #
 $Revision: 1.5 $ $Date: 2009/05/27 11:36:04 $
+! t/05method.t
+  Addressed: #52643: GitLive-blead-2143-g09330df breaks 1.05
+  http://rt.cpan.org/Public/Bug/Display.html?id=52643
+
+1.05 2009/05/27 11:36:04
 ! lib/Attribute/Method.pm
   Addressed: #46403: Attribute::Method
   - not preserving line number information and sub names
