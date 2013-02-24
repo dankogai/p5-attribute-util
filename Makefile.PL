@@ -1,3 +1,4 @@
+use 5.008001;
 use strict;
 use warnings;
 use ExtUtils::MakeMaker;
@@ -22,9 +23,11 @@ WriteMakefile(
           (
             ABSTRACT_FROM =>
               'lib/Attribute/Util.pm',    # retrieve abstract from module
-            AUTHOR => 'Dan Kogai <dankogai@dan.co.jp>'
+            AUTHOR => 'Dan Kogai <dankogai+cpan@gmail.com>'
           )
         : ()
     ),
+    dist  => { COMPRESS => 'gzip -9f', SUFFIX => 'gz', },
+    clean => { FILES => 'Digest-SipHash-*' },
 
 );
