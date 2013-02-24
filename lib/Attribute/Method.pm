@@ -5,7 +5,7 @@ use strict;
 use Attribute::Handlers;
 use B::Deparse;
 
-our $VERSION = sprintf "%d.%02d", q$Revision: 1.3 $ =~ /(\d+)/g;
+our $VERSION = sprintf "%d.%02d", q$Revision: 1.4 $ =~ /(\d+)/g;
 
 my $dp        = Attribute::Method::_Deparse->new('-l');
 my $dppack;

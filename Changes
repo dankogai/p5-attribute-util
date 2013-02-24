@@ -1,8 +1,15 @@
 # Revision history for Perl extension Attribute::Util.
 #
-# $Id: Changes,v 1.6 2010/05/04 06:55:09 dankogai Exp dankogai $
+# $Id: Changes,v 1.7 2013/02/24 09:14:26 dankogai Exp dankogai $
 #
-$Revision: 1.6 $ $Date: 2010/05/04 06:55:09 $
+$Revision: 1.7 $ $Date: 2013/02/24 09:14:26 $
+! *.pm
+  Fixed mail address
+! lib/Attribute/Method.pm
+  Fixed: #74232: Bleadperl v5.15.6-147-g415d4c6 breaks
+  https://rt.cpan.org/Ticket/Display.html?id=74232
+
+1.06 2010/05/04 06:55:09
 ! t/05method.t
   Addressed: #52643: GitLive-blead-2143-g09330df breaks 1.05
   http://rt.cpan.org/Public/Bug/Display.html?id=52643
