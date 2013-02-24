@@ -133,7 +133,7 @@ C<use> it.  That holds true for most Attribute::* modules.
 
 =head1 AUTHOR
 
-Dan Kogai, E<lt>dankogai@dan.co.jpE<gt>
+Dan Kogai, C<< <dankogai+cpan at gmail.com> >>
 
 =head1 COPYRIGHT
 

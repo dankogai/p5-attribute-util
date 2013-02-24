@@ -59,7 +59,7 @@ author.
 
 Marcel Grunauer, <marcel@codewerk.com>
 
-Dan Kogai, <dankogai@dan.co.jp>
+Dan Kogai, C<< <dankogai+cpan at gmail.com> >>
 
 =head1 COPYRIGHT
 
